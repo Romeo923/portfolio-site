@@ -12,10 +12,10 @@ export default function Main() {
                     Let's Build Something Together
                 </p>
                 <h1 className='py-4 text-gray-700'>
-                    Hi, I'm <span className='text-[#5651e5]'>Romeo</span>
+                    Hi, I'm <span className='text-accent'>Romeo</span>
                 </h1>
                 <h1 className='py-2 text-gray-700'>
-                    A <span className='text-[#5651e5]'>Software Engineer</span> and <div className='text-[#5651e5]'>Front-End Dev</div>
+                    A <span className='text-accent'>Software Engineer</span> and <div className='text-accent'>Front-End Dev</div>
                 </h1>
                 <p className='py-4 text-gray-600 max-w-[70%] m-auto'>
                     Description

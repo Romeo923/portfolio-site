@@ -11,27 +11,39 @@ export default function Skills() {
 				<p className='text-xl uppercase tracking-widest text-[#5651e5]'>
 					Skills
 				</p>
-				<h2 className='py-4'>What I Can Do</h2>
+				<h2 className='py-4'>Tech I Use</h2>
 				<div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
 					<SkillItem
-						imgPath='thirteen.svg'
-						name='Skill 1'
+						imgPath='/skills/cpp.png'
+						name='C++'
 					/>
 					<SkillItem
-						imgPath='thirteen.svg'
-						name='Skill 2'
+						imgPath='/skills/c.svg'
+						name='C#'
 					/>
 					<SkillItem
-						imgPath='thirteen.svg'
-						name='Skill 3'
+						imgPath='/skills/python.png'
+						name='Python'
 					/>
 					<SkillItem
-						imgPath='thirteen.svg'
-						name='Skill 4'
+						imgPath='/skills/java.png'
+						name='Java'
 					/>
 					<SkillItem
-						imgPath='thirteen.svg'
-						name='Skill 5'
+						imgPath='/skills/Typescript.png'
+						name='Typescript'
+					/>
+					<SkillItem
+						imgPath='/skills/html.png'
+						name='HTML'
+					/>
+					<SkillItem
+						imgPath='/skills/tailwind.png'
+						name='Tailwind CSS'
+					/>
+					<SkillItem
+						imgPath='/skills/github.svg'
+						name='GitHub'
 					/>
 				</div>
 			</div>

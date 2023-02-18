@@ -1,3 +1,6 @@
+"use client"
+
+import { useTheme } from "next-themes"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
@@ -7,6 +10,9 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { HiOutlineChevronDoubleUp } from "react-icons/hi"
 
 export default function Contact() {
+	const { systemTheme, theme, setTheme } = useTheme()
+	const currTheme = theme === "system" ? systemTheme : theme ? theme : "light"
+
 	return (
 		<div
 			id='contact'
@@ -23,10 +29,14 @@ export default function Contact() {
 							<div>
 								<Image
 									className='rounded-xl duration-300 ease-in hover:scale-105'
-									src='/favicon.ico'
+									src={
+										currTheme === "light"
+											? "logoLight.svg"
+											: "logoDark.svg"
+									}
 									alt='/'
-									width={50}
-									height={50}
+									width={200}
+									height={200}
 								/>
 							</div>
 							<div>

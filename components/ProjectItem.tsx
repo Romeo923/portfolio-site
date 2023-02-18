@@ -29,7 +29,7 @@ export default function ProjectItem({
 					{name}
 				</h3>
 				<p className='pt2 pb-4 text-center text-white'>{description}</p>
-				<Link href={projUrl}>
+				<Link href={"/projects/" + projUrl}>
 					<p className='cursor-pointer rounded-lg bg-white py-3 text-center text-lg font-bold text-gray-700'>
 						More Info
 					</p>
