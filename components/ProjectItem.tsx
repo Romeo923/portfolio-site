@@ -16,11 +16,11 @@ export default function ProjectItem({
 	projUrl,
 }: ProjectItemProps) {
 	return (
-		<div className='group relative flex h-auto w-full items-center justify-center rounded-xl from-[#5651e5] to-[#709dff] p-4 shadow-xl shadow-gray-400 hover:bg-gradient-to-r'>
+		<div className='group relative flex h-auto w-full items-center justify-center rounded-xl from-accent to-accent2 p-4 shadow-xl shadow-gray-400 hover:bg-gradient-to-r dark:shadow-none dark:ring-1 dark:ring-white'>
 			<Image
 				src={imgPath}
-				width={500}
-				height={500}
+				width={750}
+				height={750}
 				alt='/'
 				className='rounded-xl group-hover:opacity-10'
 			/>
@@ -28,9 +28,11 @@ export default function ProjectItem({
 				<h3 className='text-center text-2xl tracking-wider text-white'>
 					{name}
 				</h3>
-				<p className='pt2 pb-4 text-center text-white'>{description}</p>
+				<p className='pt2 hidden pb-4 text-center text-white md:block'>
+					{description}
+				</p>
 				<Link href={"/projects/" + projUrl}>
-					<p className='cursor-pointer rounded-lg bg-white py-3 text-center text-lg font-bold text-gray-700'>
+					<p className='my-4 cursor-pointer rounded-lg bg-white text-center text-lg font-bold text-gray-700 md:my-auto md:py-3'>
 						More Info
 					</p>
 				</Link>

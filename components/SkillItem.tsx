@@ -8,7 +8,7 @@ type SkillItemProps = {
 
 export default function SkillItem({ imgPath, name }: SkillItemProps) {
 	return (
-		<div className='rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105'>
+		<div className='rounded-xl p-6 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 dark:shadow-none dark:ring-1 dark:ring-white'>
 			<div className='grid grid-cols-2 items-center justify-center gap-4'>
 				<div className='m-auto'>
 					<Image

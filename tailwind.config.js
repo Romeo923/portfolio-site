@@ -11,7 +11,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        logo:{
+        primary:{
+          light:"#ecf0f3",
+          dark:"#1f2937",
           white: {
             1:'#ffffff',
             2:'#e6e6e6',
@@ -23,11 +25,8 @@ module.exports = {
             3:'#2a2a2a'
           }
         },
-        primary:{
-          light:"#ecf0f3",
-          dark:"#1f2937"
-        },
-        accent: "#5651e5"
+        accent: "#5651e5",
+        accent2:"#709dff"
       }
     },
   },

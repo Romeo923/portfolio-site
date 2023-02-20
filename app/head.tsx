@@ -12,7 +12,7 @@ export default function Head() {
 			/>
 			<link
 				rel='icon'
-				href='/favicon.ico'
+				href='/logoDark.svg'
 			/>
 		</>
 	)

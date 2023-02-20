@@ -8,11 +8,11 @@ export default function Skills() {
 			className='w-full p-2 lg:h-screen'
 		>
 			<div className='mx-auto flex h-full max-w-[1240px] flex-col justify-center'>
-				<p className='text-xl uppercase tracking-widest text-[#5651e5]'>
+				<p className='text-xl uppercase tracking-widest text-accent'>
 					Skills
 				</p>
 				<h2 className='py-4'>Tech I Use</h2>
-				<div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
+				<div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4 '>
 					<SkillItem
 						imgPath='/skills/cpp.png'
 						name='C++'
@@ -32,6 +32,14 @@ export default function Skills() {
 					<SkillItem
 						imgPath='/skills/Typescript.png'
 						name='Typescript'
+					/>
+					<SkillItem
+						imgPath='/skills/react.png'
+						name='React'
+					/>
+					<SkillItem
+						imgPath='/skills/nextjs.png'
+						name='Next.js'
 					/>
 					<SkillItem
 						imgPath='/skills/html.png'

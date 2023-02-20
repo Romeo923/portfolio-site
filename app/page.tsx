@@ -6,7 +6,7 @@ import Contact from "@/components/Contact"
 
 export default function Home() {
 	return (
-		<main className='text-primary-dark duration-300 ease-in dark:bg-primary-dark dark:text-primary-light'>
+		<main>
 			<Main />
 			<About />
 			<Skills />

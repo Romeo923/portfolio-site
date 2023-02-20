@@ -21,8 +21,10 @@ export default function RootLayout({
 					enableSystem={true}
 					attribute='class'
 				>
-					<Navbar />
-					{children}
+					<div className='text-primary-black-1 duration-300 ease-in dark:bg-primary-black-1 dark:text-primary-white-1'>
+						<Navbar />
+						{children}
+					</div>
 				</ThemeProvider>
 			</body>
 		</html>

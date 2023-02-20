@@ -2,29 +2,44 @@
 
 import { useTheme } from "next-themes"
 import Image from "next/image"
-import Link from "next/link"
-import React from "react"
+import React, { useRef } from "react"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { HiOutlineChevronDoubleUp } from "react-icons/hi"
 
 export default function Contact() {
-	const { systemTheme, theme, setTheme } = useTheme()
-	const currTheme = theme === "system" ? systemTheme : theme ? theme : "light"
+	const { systemTheme, theme } = useTheme()
+	const currTheme = theme === "system" ? systemTheme : theme
+
+	const nameRef = useRef<HTMLInputElement>(null)
+	const phoneRef = useRef<HTMLInputElement>(null)
+	const emailRef = useRef<HTMLInputElement>(null)
+	const subjectRef = useRef<HTMLInputElement>(null)
+	const messageRef = useRef<HTMLTextAreaElement>(null)
+
+	const submit = () => {
+		console.log({
+			name: nameRef.current?.value,
+			phone: phoneRef.current?.value,
+			email: emailRef.current?.value,
+			subject: subjectRef.current?.value,
+			message: messageRef.current?.value,
+		})
+	}
 
 	return (
 		<div
 			id='contact'
-			className='w-full lg:h-screen'
+			className='w-full p-2 py-16 lg:h-screen'
 		>
 			<div className='m-auto w-full max-w-[1240px] px-2 py-16'>
-				<p className='text-xl uppercase tracking-widest text-[#5651e5]'>
+				<p className='text-xl uppercase tracking-widest text-accent'>
 					Contact
 				</p>
 				<h2 className='py-4'>Get In Touch</h2>
 				<div className='grid gap-8 lg:grid-cols-5'>
-					<div className='col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2'>
+					<div className='col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 dark:shadow-none dark:ring-1 dark:ring-white lg:col-span-2'>
 						<div className='h-full lg:p-4'>
 							<div>
 								<Image
@@ -52,23 +67,23 @@ export default function Contact() {
 									Connect With Me
 								</p>
 								<div className='flex items-center justify-between py-4'>
-									<div className='social-icon p-6 hover:scale-110'>
+									<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
 										<FaLinkedinIn />
 									</div>
-									<div className='social-icon p-6 hover:scale-110'>
+									<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
 										<FaGithub />
 									</div>
-									<div className='social-icon p-6 hover:scale-110'>
+									<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
 										<AiOutlineMail />
 									</div>
-									<div className='social-icon p-6 hover:scale-110'>
+									<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
 										<BsFillPersonLinesFill />
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className='col-span-3 h-auto w-full rounded-lg shadow-xl shadow-gray-400 lg:p-4'>
+					<div className='col-span-3 h-auto w-full rounded-lg shadow-xl shadow-gray-400 dark:shadow-none dark:ring-1 dark:ring-white lg:p-4'>
 						<div className='p-4'>
 							<form>
 								<div className='grid w-full gap-4 py-2 md:grid-cols-2'>
@@ -77,6 +92,7 @@ export default function Contact() {
 											Name
 										</label>
 										<input
+											ref={nameRef}
 											className='felx rounded-lg border-2 border-gray-300 p-3'
 											type='text'
 										/>
@@ -86,6 +102,7 @@ export default function Contact() {
 											Phone Number
 										</label>
 										<input
+											ref={phoneRef}
 											className='flex rounded-lg border-2 border-gray-300 p-3'
 											type='text'
 										/>
@@ -96,6 +113,7 @@ export default function Contact() {
 										Email
 									</label>
 									<input
+										ref={emailRef}
 										className='felx rounded-lg border-2 border-gray-300 p-3'
 										type='email'
 									/>
@@ -105,6 +123,7 @@ export default function Contact() {
 										Subject
 									</label>
 									<input
+										ref={subjectRef}
 										className='felx rounded-lg border-2 border-gray-300 p-3'
 										type='text'
 									/>
@@ -114,11 +133,15 @@ export default function Contact() {
 										Message
 									</label>
 									<textarea
+										ref={messageRef}
 										className='rounded-lg border-2 border-gray-300 p-3'
 										rows={10}
 									></textarea>
 								</div>
-								<button className='mt-4 w-full p-4 text-gray-100'>
+								<button
+									onClick={submit}
+									className='mt-4 w-full p-4 text-gray-100 dark:shadow-none dark:ring-1 dark:ring-white'
+								>
 									Send Message
 								</button>
 							</form>
@@ -126,14 +149,14 @@ export default function Contact() {
 					</div>
 				</div>
 				<div className='flex justify-center py-12'>
-					<Link href='/'>
-						<div className='social-icon p-4 hover:scale-110'>
+					<a href='/#home'>
+						<div className='social-icon p-4 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
 							<HiOutlineChevronDoubleUp
-								className='m-auto text-[#5651e5]'
+								className='m-auto text-accent'
 								size={30}
 							/>
 						</div>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>
