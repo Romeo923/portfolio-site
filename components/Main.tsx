@@ -22,19 +22,19 @@ export default function Main() {
 						and <div className='text-accent'>Front-End Dev</div>
 					</h1>
 					<p className='m-auto max-w-[70%] py-4 text-gray-600 dark:text-primary-white-3'>
-						Description
+						Explore My Socials Below
 					</p>
 					<div className='m-auto flex max-w-[330px] items-center justify-between py-4'>
-						<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+						<div className='social-icon p-6 hover:scale-110'>
 							<FaLinkedinIn />
 						</div>
-						<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+						<div className='social-icon p-6 hover:scale-110'>
 							<FaGithub />
 						</div>
-						<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+						<div className='social-icon p-6 hover:scale-110'>
 							<AiOutlineMail />
 						</div>
-						<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+						<div className='social-icon p-6 hover:scale-110'>
 							<BsFillPersonLinesFill />
 						</div>
 					</div>

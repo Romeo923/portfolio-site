@@ -5,7 +5,7 @@ export default function Projects() {
 	return (
 		<div
 			id='projects'
-			className='w-full p-16 dark:bg-primary-black-2 dark:shadow-md dark:shadow-gray-400 lg:h-screen'
+			className='w-full p-16 lg:h-screen'
 		>
 			<div className='mx-auto h-full max-w-[1240px] px-2 py-16'>
 				<p className='text-xl uppercase tracking-widest text-accent'>

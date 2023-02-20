@@ -39,7 +39,7 @@ export default function Contact() {
 				</p>
 				<h2 className='py-4'>Get In Touch</h2>
 				<div className='grid gap-8 lg:grid-cols-5'>
-					<div className='col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 dark:shadow-none dark:ring-1 dark:ring-white lg:col-span-2'>
+					<div className='col-span-3 h-full w-full rounded-xl p-4 shadow-md shadow-gray-400 lg:col-span-2'>
 						<div className='h-full lg:p-4'>
 							<div>
 								<Image
@@ -58,8 +58,9 @@ export default function Contact() {
 								<h2 className='py-2'>Romeo Capozziello</h2>
 								<p>Software Engineer & Front-End Dev</p>
 								<p className='py-4'>
-									I am available for freelance or full-time
-									positions. Contact me and let's talk.
+									I am current available for freelance or
+									full-time positions. Contact me and let's
+									talk.
 								</p>
 							</div>
 							<div>
@@ -67,23 +68,23 @@ export default function Contact() {
 									Connect With Me
 								</p>
 								<div className='flex items-center justify-between py-4'>
-									<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+									<div className='social-icon p-6 hover:scale-110'>
 										<FaLinkedinIn />
 									</div>
-									<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+									<div className='social-icon p-6 hover:scale-110'>
 										<FaGithub />
 									</div>
-									<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+									<div className='social-icon p-6 hover:scale-110'>
 										<AiOutlineMail />
 									</div>
-									<div className='social-icon p-6 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+									<div className='social-icon p-6 hover:scale-110'>
 										<BsFillPersonLinesFill />
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className='col-span-3 h-auto w-full rounded-lg shadow-xl shadow-gray-400 dark:shadow-none dark:ring-1 dark:ring-white lg:p-4'>
+					<div className='col-span-3 h-auto w-full rounded-lg shadow-md shadow-gray-400 lg:p-4'>
 						<div className='p-4'>
 							<form>
 								<div className='grid w-full gap-4 py-2 md:grid-cols-2'>
@@ -140,7 +141,7 @@ export default function Contact() {
 								</div>
 								<button
 									onClick={submit}
-									className='mt-4 w-full p-4 text-gray-100 dark:shadow-none dark:ring-1 dark:ring-white'
+									className='mt-4 w-full p-4 text-gray-100 shadow-none'
 								>
 									Send Message
 								</button>
@@ -150,7 +151,7 @@ export default function Contact() {
 				</div>
 				<div className='flex justify-center py-12'>
 					<a href='/#home'>
-						<div className='social-icon p-4 hover:scale-110 dark:shadow-none dark:ring-1 dark:ring-white'>
+						<div className='social-icon p-4 shadow-none hover:scale-110 dark:shadow-none'>
 							<HiOutlineChevronDoubleUp
 								className='m-auto text-accent'
 								size={30}

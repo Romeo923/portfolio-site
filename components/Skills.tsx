@@ -8,10 +8,9 @@ export default function Skills() {
 			className='w-full p-2 lg:h-screen'
 		>
 			<div className='mx-auto flex h-full max-w-[1240px] flex-col justify-center'>
-				<p className='text-xl uppercase tracking-widest text-accent'>
+				<h1 className='pb-4 text-2xl uppercase tracking-widest text-accent'>
 					Skills
-				</p>
-				<h2 className='py-4'>Tech I Use</h2>
+				</h1>
 				<div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4 '>
 					<SkillItem
 						imgPath='/skills/cpp.png'
