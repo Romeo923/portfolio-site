@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
@@ -18,25 +19,44 @@ export default function Main() {
 						Hi, I'm <span className='text-accent'>Romeo</span>
 					</h1>
 					<h1 className='py-2 text-gray-700 dark:text-primary-white-2'>
-						A <span className='text-accent'>Software Engineer</span>{" "}
+						A
+						<span className='text-accent'> Software Engineer </span>
 						and <div className='text-accent'>Front-End Dev</div>
 					</h1>
-					<p className='m-auto max-w-[70%] py-4 text-gray-600 dark:text-primary-white-3'>
-						Explore My Socials Below
-					</p>
+					<p className='m-auto max-w-[70%] py-4 text-gray-600 dark:text-primary-white-3'></p>
 					<div className='m-auto flex max-w-[330px] items-center justify-between py-4'>
-						<div className='social-icon p-6 hover:scale-110'>
+						<Link
+							target='_blank'
+							rel='noopener noreferrer'
+							href='https://linkedin.com/in/romeo923/'
+							className='social-icon p-6 hover:scale-110'
+						>
 							<FaLinkedinIn />
-						</div>
-						<div className='social-icon p-6 hover:scale-110'>
+						</Link>
+						<Link
+							target='_blank'
+							rel='noopener noreferrer'
+							href='https://github.com/Romeo923'
+							className='social-icon p-6 hover:scale-110'
+						>
 							<FaGithub />
-						</div>
-						<div className='social-icon p-6 hover:scale-110'>
+						</Link>
+						<Link
+							target='_blank'
+							rel='noopener noreferrer'
+							href='mailto:romeo.capozziello@gmail.com'
+							className='social-icon p-6 hover:scale-110'
+						>
 							<AiOutlineMail />
-						</div>
-						<div className='social-icon p-6 hover:scale-110'>
+						</Link>
+						<Link
+							target='_blank'
+							rel='noopener noreferrer'
+							href='/resume.pdf'
+							className='social-icon p-6 hover:scale-110'
+						>
 							<BsFillPersonLinesFill />
-						</div>
+						</Link>
 					</div>
 				</div>
 			</div>

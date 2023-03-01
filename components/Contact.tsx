@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes"
 import Image from "next/image"
+import Link from "next/link"
 import React, { useRef } from "react"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
@@ -27,7 +28,6 @@ export default function Contact() {
 			message: messageRef.current?.value,
 		})
 	}
-
 	return (
 		<div
 			id='contact'
@@ -46,8 +46,8 @@ export default function Contact() {
 									className='rounded-xl duration-300 ease-in hover:scale-105'
 									src={
 										currTheme === "light"
-											? "logoLight.svg"
-											: "logoDark.svg"
+											? "/logoLight.svg"
+											: "/logoDark.svg"
 									}
 									alt='/'
 									width={200}
@@ -68,18 +68,38 @@ export default function Contact() {
 									Connect With Me
 								</p>
 								<div className='flex items-center justify-between py-4'>
-									<div className='social-icon p-6 hover:scale-110'>
+									<Link
+										target='_blank'
+										rel='noopener noreferrer'
+										href='https://linkedin.com/in/romeo923/'
+										className='social-icon p-6 hover:scale-110'
+									>
 										<FaLinkedinIn />
-									</div>
-									<div className='social-icon p-6 hover:scale-110'>
+									</Link>
+									<Link
+										target='_blank'
+										rel='noopener noreferrer'
+										href='https://github.com/Romeo923'
+										className='social-icon p-6 hover:scale-110'
+									>
 										<FaGithub />
-									</div>
-									<div className='social-icon p-6 hover:scale-110'>
+									</Link>
+									<Link
+										target='_blank'
+										rel='noopener noreferrer'
+										href='mailto:romeo.capozziello@gmail.com'
+										className='social-icon p-6 hover:scale-110'
+									>
 										<AiOutlineMail />
-									</div>
-									<div className='social-icon p-6 hover:scale-110'>
+									</Link>
+									<Link
+										target='_blank'
+										rel='noopener noreferrer'
+										href='/resume.pdf'
+										className='social-icon p-6 hover:scale-110'
+									>
 										<BsFillPersonLinesFill />
-									</div>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -154,7 +174,7 @@ export default function Contact() {
 						<div className='social-icon p-4 shadow-none hover:scale-110 dark:shadow-none'>
 							<HiOutlineChevronDoubleUp
 								className='m-auto text-accent'
-								size={30}
+								size={50}
 							/>
 						</div>
 					</a>

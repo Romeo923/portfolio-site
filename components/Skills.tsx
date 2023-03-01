@@ -11,7 +11,7 @@ export default function Skills() {
 				<h1 className='pb-4 text-2xl uppercase tracking-widest text-accent'>
 					Skills
 				</h1>
-				<div className='grid gap-8 md:grid-cols-2 lg:grid-cols-4 '>
+				<div className='grid grid-cols-4 gap-8 md:grid-cols-2 lg:grid-cols-4 '>
 					<SkillItem
 						imgPath='/skills/cpp.png'
 						name='C++'

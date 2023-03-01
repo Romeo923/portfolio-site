@@ -16,11 +16,8 @@ export default function Navbar() {
 
 	const currTheme = theme === "system" ? systemTheme : theme
 
-	if (!theme) {
-		setTheme("light")
-	}
-
 	useEffect(() => {
+		setTheme(currTheme || "light")
 		const handleShadow = () => {
 			if (window.scrollY >= 90) {
 				setShadow(true)
@@ -44,12 +41,15 @@ export default function Navbar() {
 			}
 		>
 			<div className='flex h-full w-full items-center justify-between px-2 2xl:px-16'>
-				<a href='/'>
+				<a
+					href='/'
+					className='mt-1'
+				>
 					<Image
 						src={
 							currTheme === "light"
-								? "logoLight.svg"
-								: "logoDark.svg"
+								? "/logoLight.svg"
+								: "/logoDark.svg"
 						}
 						alt='/'
 						width='75'
@@ -84,36 +84,26 @@ export default function Navbar() {
 							</li>
 						</a>
 						<div className='ml-10 mr-5 text-sm uppercase'>
-							{currTheme === "light" ? (
-								<li
-									onClick={() => {
-										setTheme("dark")
-									}}
-								>
-									<RiMoonFill size={20} />
-								</li>
-							) : (
-								<li
-									onClick={() => {
-										setTheme("light")
-									}}
-								>
-									<RiSunFill
-										color='white'
+							<li>
+								{currTheme === "light" ? (
+									<RiMoonFill
 										size={20}
+										onClick={() => setTheme("dark")}
 									/>
-								</li>
-							)}
+								) : (
+									<RiSunFill
+										size={20}
+										onClick={() => setTheme("light")}
+									/>
+								)}
+							</li>
 						</div>
 					</ul>
 					<div
 						onClick={handleNav}
 						className='cursor-pointer md:hidden'
 					>
-						<AiOutlineMenu
-							size={25}
-							color={currTheme === "light" ? "black" : "white"}
-						/>
+						<AiOutlineMenu size={25} />
 					</div>
 				</div>
 			</div>
@@ -137,8 +127,8 @@ export default function Navbar() {
 								<Image
 									src={
 										currTheme === "light"
-											? "logoLight.svg"
-											: "logoDark.svg"
+											? "/logoLight.svg"
+											: "/logoDark.svg"
 									}
 									alt='/'
 									width='120'
@@ -197,18 +187,38 @@ export default function Navbar() {
 								Let&apos;s Connect
 							</p>
 							<div className='my-4 flex w-full items-center justify-between sm:w-[80%]'>
-								<div className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'>
+								<Link
+									target='_blank'
+									rel='noopener noreferrer'
+									href='https://linkedin.com/in/romeo923/'
+									className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'
+								>
 									<FaLinkedinIn />
-								</div>
-								<div className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'>
+								</Link>
+								<Link
+									target='_blank'
+									rel='noopener noreferrer'
+									href='https://github.com/Romeo923'
+									className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'
+								>
 									<FaGithub />
-								</div>
-								<div className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'>
+								</Link>
+								<Link
+									target='_blank'
+									rel='noopener noreferrer'
+									href='mailto:romeo.capozziello@gmail.com'
+									className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'
+								>
 									<AiOutlineMail />
-								</div>
-								<div className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'>
+								</Link>
+								<Link
+									target='_blank'
+									rel='noopener noreferrer'
+									href='/resume.pdf'
+									className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'
+								>
 									<BsPersonLinesFill />
-								</div>
+								</Link>
 								{currTheme === "light" ? (
 									<div
 										className='social-icon dark:shadow-none dark:ring-1 dark:ring-white'
