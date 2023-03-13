@@ -2,29 +2,35 @@
 
 import Link from "next/link"
 import React from "react"
-import { motion } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 export default function Main() {
+	const { scrollYProgress } = useScroll()
+	const scale = useTransform(scrollYProgress, [0, 0.1], [1, 10])
+	const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0])
+	const visibility = useTransform(
+		scrollYProgress,
+		[0, 0.1],
+		["visible", "hidden"]
+	)
+
 	return (
 		<motion.div
 			key='home'
-			initial={{ scale: 0.2, opacity: 0 }}
-			animate={{ scale: 1, opacity: 1 }}
-			exit={{ scale: 15, opacity: 0 }}
-			transition={{ duration: 2 }}
+			// style={{ scale: scale, opacity: opacity }}
 			id='home'
 			className='h-screen w-full snap-center text-center'
 		>
 			<div className='mx-auto flex h-full w-full max-w-[1240px] items-center justify-center p-2'>
 				<div>
 					<p className='uppercase tracking-widest text-gray-600 dark:text-primary-white-3'>
-						Let's Build Something Together
+						Let&apos;s Build Something Together
 					</p>
 					<h1 className='py-4 text-gray-700 dark:text-primary-white-2'>
-						Hi, I'm <span className='text-accent'>Romeo</span>
+						Hi, I&apos;m <span className='text-accent'>Romeo</span>
 					</h1>
 					<h1 className='py-2 text-gray-700 dark:text-primary-white-2'>
 						A

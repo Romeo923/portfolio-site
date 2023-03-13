@@ -1,36 +1,29 @@
-"use client"
-
 import Navbar from "@/components/Navbar"
+import Providers from "@/components/Providers"
 import "./globals.css"
-import { ThemeProvider } from "next-themes"
-import { AnimatePresence } from "framer-motion"
 
 // export const metadata = {
 // 	title: "Romeo Capozziello",
 // }
 
-export default function RootLayout({
-	children,
-}: {
+type Props = {
 	children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: Props) {
 	return (
-		<html lang='en'>
-			{/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+		<html
+			lang='en'
+			suppressHydrationWarning
+		>
 			<head />
 			<body>
-				<ThemeProvider
-					enableSystem={true}
-					attribute='class'
-				>
-					<div className='text-primary-black-1 duration-300 ease-in dark:bg-primary-black-1 dark:text-primary-white-1'>
+				<div className='text-primary-black-1 duration-300 ease-in dark:bg-primary-black-1 dark:text-primary-white-1'>
+					<Providers>
 						<Navbar />
-						<AnimatePresence>{children}</AnimatePresence>
-					</div>
-				</ThemeProvider>
+						{children}
+					</Providers>
+				</div>
 			</body>
 		</html>
 	)

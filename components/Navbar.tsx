@@ -12,17 +12,13 @@ import { RiMoonFill, RiSunFill } from "react-icons/ri"
 export default function Navbar() {
 	const [nav, setNav] = useState(false)
 	const [shadow, setShadow] = useState(false)
-	const { systemTheme, theme, setTheme } = useTheme()
-	const [logo, setLogo] = useState("/logoLight.svg")
+	const { theme, setTheme } = useTheme()
 
-	const currTheme = theme === "system" ? systemTheme : theme
+	const currTheme = theme ? theme : "light"
 
-	useEffect(() => {
-		theme === "light" ? setLogo("/logoLight.svg") : setLogo("/logoDark.svg")
-	}, [theme])
+	console.log(theme, currTheme)
 
 	useEffect(() => {
-		setTheme(currTheme || "light")
 		const handleShadow = () => {
 			if (window.scrollY >= 90) {
 				setShadow(true)
@@ -48,7 +44,11 @@ export default function Navbar() {
 			<div className='flex h-full w-full items-center justify-between px-2 2xl:px-16'>
 				<Link href='/'>
 					<Image
-						src={logo}
+						src={
+							currTheme === "light"
+								? "/logoLight.svg"
+								: "/logoDark.svg"
+						}
 						alt='/'
 						width='75'
 						height='75'
@@ -141,7 +141,11 @@ export default function Navbar() {
 								href='/'
 							>
 								<Image
-									src={logo}
+									src={
+										currTheme === "light"
+											? "/logoLight.svg"
+											: "/logoDark.svg"
+									}
 									alt='/'
 									width='120'
 									height='120'

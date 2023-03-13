@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image"
 import React from "react"
+import { motion } from "framer-motion"
 
 export default function About() {
 	return (
@@ -15,11 +17,17 @@ export default function About() {
 					{/* <p className='py-2 text-gray-600 dark:text-primary-white-3'>
 						IDK What to write here
 					</p> */}
-					<div className='my-4 rounded-xl px-4 py-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 dark:rounded-md dark:bg-primary-black-1 dark:shadow-none dark:ring-1 dark:ring-white'>
+					<motion.div
+						key='bio'
+						initial={{ x: -100, opacity: 0 }}
+						whileInView={{ x: 0, opacity: 1 }}
+						transition={{ duration: 1 }}
+						className='my-4 rounded-xl px-4 py-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 dark:rounded-md dark:bg-primary-black-1 dark:shadow-none dark:ring-1 dark:ring-white'
+					>
 						<h2 className='pb-5'>Bio</h2>
 						<p className='text-gray-600 dark:text-primary-white-3'>
-							I'm a driven and motivated grad student pursuing my
-							Masters in C.S.
+							I&apos;m a driven and motivated grad student
+							pursuing my Masters in C.S.
 						</p>
 						<p className='py-2 text-gray-600 dark:text-primary-white-3'>
 							Throughout my journey, I have honed my skills in
@@ -38,10 +46,16 @@ export default function About() {
 							interfaces using HTML, CSS, and JavaScript. I am
 							passionate about leveraging technology to create
 							impactful solutions that can make a positive
-							difference in people's lives.
+							difference in people&apos;s lives.
 						</p>
-					</div>
-					<div className='mx-auto rounded-xl px-4 py-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 dark:rounded-md dark:bg-primary-black-1 dark:shadow-none dark:ring-1 dark:ring-white'>
+					</motion.div>
+					<motion.div
+						key='school'
+						initial={{ x: -100, opacity: 0 }}
+						whileInView={{ x: 0, opacity: 1 }}
+						transition={{ duration: 1, delay: 1 }}
+						className='mx-auto rounded-xl px-4 py-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 dark:rounded-md dark:bg-primary-black-1 dark:shadow-none dark:ring-1 dark:ring-white'
+					>
 						<div className='grid grid-cols-2'>
 							<h3 className='col-span-2'>Education</h3>
 							<p className='text-gray-600 dark:text-primary-white-3'>
@@ -73,7 +87,7 @@ export default function About() {
 								OOP W/ Design Patterns
 							</p>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 				<div className='m-auto flex h-auto w-full items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 dark:rounded-md dark:bg-primary-black-1 dark:shadow-none dark:ring-1 dark:ring-white'>
 					<Image

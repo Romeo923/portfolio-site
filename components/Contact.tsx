@@ -3,20 +3,16 @@
 import { useTheme } from "next-themes"
 import Image from "next/image"
 import Link from "next/link"
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef } from "react"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { HiOutlineChevronDoubleUp } from "react-icons/hi"
 
 export default function Contact() {
-	const { systemTheme, theme } = useTheme()
-	const currTheme = theme === "system" ? systemTheme : theme
+	const { theme } = useTheme()
 
-	const [logo, setLogo] = useState("/logoLight.svg")
-	useEffect(() => {
-		theme === "light" ? setLogo("/logoLight.svg") : setLogo("/logoDark.svg")
-	}, [theme])
+	const currTheme = theme ? theme : "light"
 
 	const nameRef = useRef<HTMLInputElement>(null)
 	const phoneRef = useRef<HTMLInputElement>(null)
@@ -49,7 +45,11 @@ export default function Contact() {
 							<div>
 								<Image
 									className='rounded-xl duration-300 ease-in hover:scale-105'
-									src={logo}
+									src={
+										currTheme === "light"
+											? "/logoLight.svg"
+											: "/logoDark.svg"
+									}
 									alt='/'
 									width={200}
 									height={200}
@@ -60,8 +60,8 @@ export default function Contact() {
 								<p>Software Engineer & Front-End Dev</p>
 								<p className='py-4'>
 									I am current available for freelance or
-									full-time positions. Contact me and let's
-									talk.
+									full-time positions. Contact me and
+									let&apos;s talk.
 								</p>
 							</div>
 							<div>
