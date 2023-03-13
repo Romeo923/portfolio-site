@@ -12,11 +12,9 @@ import { RiMoonFill, RiSunFill } from "react-icons/ri"
 export default function Navbar() {
 	const [nav, setNav] = useState(false)
 	const [shadow, setShadow] = useState(false)
-	const { theme, setTheme } = useTheme()
+	const { systemTheme, theme, setTheme } = useTheme()
 
-	const currTheme = theme ? theme : "light"
-
-	console.log(theme, currTheme)
+	const currTheme = theme === "system" ? systemTheme : theme
 
 	useEffect(() => {
 		const handleShadow = () => {

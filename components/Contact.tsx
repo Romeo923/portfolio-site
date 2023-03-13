@@ -10,9 +10,8 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { HiOutlineChevronDoubleUp } from "react-icons/hi"
 
 export default function Contact() {
-	const { theme } = useTheme()
-
-	const currTheme = theme ? theme : "light"
+	const { systemTheme, theme } = useTheme()
+	const currTheme = theme === "system" ? systemTheme : theme
 
 	const nameRef = useRef<HTMLInputElement>(null)
 	const phoneRef = useRef<HTMLInputElement>(null)
