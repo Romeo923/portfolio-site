@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes"
 import Image from "next/image"
 import Link from "next/link"
-import React, { useRef } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
@@ -12,6 +12,11 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi"
 export default function Contact() {
 	const { systemTheme, theme } = useTheme()
 	const currTheme = theme === "system" ? systemTheme : theme
+
+	const [logo, setLogo] = useState("/logoLight.svg")
+	useEffect(() => {
+		theme === "light" ? setLogo("/logoLight.svg") : setLogo("/logoDark.svg")
+	}, [theme])
 
 	const nameRef = useRef<HTMLInputElement>(null)
 	const phoneRef = useRef<HTMLInputElement>(null)
@@ -31,7 +36,7 @@ export default function Contact() {
 	return (
 		<div
 			id='contact'
-			className='w-full p-2 py-16 lg:h-screen'
+			className='w-full snap-center p-2 py-16 lg:h-screen'
 		>
 			<div className='m-auto w-full max-w-[1240px] px-2 py-16'>
 				<p className='text-xl uppercase tracking-widest text-accent'>
@@ -44,11 +49,7 @@ export default function Contact() {
 							<div>
 								<Image
 									className='rounded-xl duration-300 ease-in hover:scale-105'
-									src={
-										currTheme === "light"
-											? "/logoLight.svg"
-											: "/logoDark.svg"
-									}
+									src={logo}
 									alt='/'
 									width={200}
 									height={200}

@@ -6,7 +6,7 @@ import Contact from "@/components/Contact"
 
 export default function Home() {
 	return (
-		<main>
+		<main className='snap-mandatory'>
 			<Main />
 			<About />
 			<Skills />

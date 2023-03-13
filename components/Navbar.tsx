@@ -13,8 +13,13 @@ export default function Navbar() {
 	const [nav, setNav] = useState(false)
 	const [shadow, setShadow] = useState(false)
 	const { systemTheme, theme, setTheme } = useTheme()
+	const [logo, setLogo] = useState("/logoLight.svg")
 
 	const currTheme = theme === "system" ? systemTheme : theme
+
+	useEffect(() => {
+		theme === "light" ? setLogo("/logoLight.svg") : setLogo("/logoDark.svg")
+	}, [theme])
 
 	useEffect(() => {
 		setTheme(currTheme || "light")
@@ -41,48 +46,56 @@ export default function Navbar() {
 			}
 		>
 			<div className='flex h-full w-full items-center justify-between px-2 2xl:px-16'>
-				<a
-					href='/'
-					className='mt-1'
-				>
+				<Link href='/'>
 					<Image
-						src={
-							currTheme === "light"
-								? "/logoLight.svg"
-								: "/logoDark.svg"
-						}
+						src={logo}
 						alt='/'
 						width='75'
 						height='75'
 					/>
-				</a>
+				</Link>
 				<div>
 					<ul className='hidden md:flex'>
-						<a href='/#home'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							<Link
+								href='/'
+								scroll={false}
+							>
 								Home
-							</li>
-						</a>
-						<a href='/#about'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							</Link>
+						</li>
+						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							<Link
+								href='/#about'
+								scroll={false}
+							>
 								About
-							</li>
-						</a>
-						<a href='/#skills'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							</Link>
+						</li>
+						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							<Link
+								href='/#skills'
+								scroll={false}
+							>
 								Skills
-							</li>
-						</a>
-						<a href='/#projects'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							</Link>
+						</li>
+						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							<Link
+								href='/#projects'
+								scroll={false}
+							>
 								Projects
-							</li>
-						</a>
-						<a href='/#contact'>
-							<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							</Link>
+						</li>
+						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+							<Link
+								href='/#contact'
+								scroll={false}
+							>
 								Contact
-							</li>
-						</a>
+							</Link>
+						</li>
 						<div className='ml-10 mr-5 text-sm uppercase'>
 							<li>
 								{currTheme === "light" ? (
@@ -123,19 +136,18 @@ export default function Navbar() {
 				>
 					<div>
 						<div className='flex w-full items-center justify-between'>
-							<a href='/'>
+							<Link
+								scroll={false}
+								href='/'
+							>
 								<Image
-									src={
-										currTheme === "light"
-											? "/logoLight.svg"
-											: "/logoDark.svg"
-									}
+									src={logo}
 									alt='/'
 									width='120'
 									height='120'
 									className='cursor-pointer'
 								/>
-							</a>
+							</Link>
 							<div
 								onClick={handleNav}
 								className='cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 dark:shadow-none dark:ring-1 dark:ring-white'
@@ -152,7 +164,7 @@ export default function Navbar() {
 					<div className='flex flex-col py-4'>
 						<ul className='uppercase'>
 							<a
-								href='/#home'
+								href='/home'
 								onClick={handleNav}
 							>
 								<li className='py-4 text-sm'>Home</li>

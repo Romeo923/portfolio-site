@@ -1,14 +1,22 @@
+"use client"
+
 import Link from "next/link"
 import React from "react"
+import { motion } from "framer-motion"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 export default function Main() {
 	return (
-		<div
+		<motion.div
+			key='home'
+			initial={{ scale: 0.2, opacity: 0 }}
+			animate={{ scale: 1, opacity: 1 }}
+			exit={{ scale: 15, opacity: 0 }}
+			transition={{ duration: 2 }}
 			id='home'
-			className='h-screen w-full text-center'
+			className='h-screen w-full snap-center text-center'
 		>
 			<div className='mx-auto flex h-full w-full max-w-[1240px] items-center justify-center p-2'>
 				<div>
@@ -60,6 +68,6 @@ export default function Main() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }

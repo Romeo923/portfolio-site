@@ -1,11 +1,14 @@
+"use client"
 import React from "react"
 import SkillItem from "./SkillItem"
+import { motion } from "framer-motion"
 
 export default function Skills() {
 	return (
-		<div
+		<motion.div
+			key='skills'
 			id='skills'
-			className='w-full p-2 lg:h-screen'
+			className='w-full snap-center p-2 lg:h-screen'
 		>
 			<div className='mx-auto flex h-full max-w-[1240px] flex-col justify-center'>
 				<h1 className='pb-4 text-2xl uppercase tracking-widest text-accent'>
@@ -54,6 +57,6 @@ export default function Skills() {
 					/>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }

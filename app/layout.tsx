@@ -3,6 +3,11 @@
 import Navbar from "@/components/Navbar"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
+import { AnimatePresence } from "framer-motion"
+
+// export const metadata = {
+// 	title: "Romeo Capozziello",
+// }
 
 export default function RootLayout({
 	children,
@@ -23,7 +28,7 @@ export default function RootLayout({
 				>
 					<div className='text-primary-black-1 duration-300 ease-in dark:bg-primary-black-1 dark:text-primary-white-1'>
 						<Navbar />
-						{children}
+						<AnimatePresence>{children}</AnimatePresence>
 					</div>
 				</ThemeProvider>
 			</body>
