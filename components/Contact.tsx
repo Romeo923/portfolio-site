@@ -31,7 +31,7 @@ export default function Contact() {
 	return (
 		<div
 			id='contact'
-			className='w-full snap-center p-2 py-16 lg:h-screen'
+			className='h-screen w-full snap-center p-2 py-16'
 		>
 			<div className='m-auto w-full max-w-[1240px] px-2 py-16'>
 				<p className='text-xl uppercase tracking-widest text-accent'>

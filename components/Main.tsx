@@ -2,25 +2,15 @@
 
 import Link from "next/link"
 import React from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 export default function Main() {
-	const { scrollYProgress } = useScroll()
-	const scale = useTransform(scrollYProgress, [0, 0.1], [1, 10])
-	const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0])
-	const visibility = useTransform(
-		scrollYProgress,
-		[0, 0.1],
-		["visible", "hidden"]
-	)
-
 	return (
 		<motion.div
 			key='home'
-			// style={{ scale: scale, opacity: opacity }}
 			id='home'
 			className='h-screen w-full snap-center text-center'
 		>

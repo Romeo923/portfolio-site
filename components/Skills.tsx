@@ -8,7 +8,7 @@ export default function Skills() {
 		<motion.div
 			key='skills'
 			id='skills'
-			className='w-full snap-center p-2 lg:h-screen'
+			className='h-screen w-full snap-center p-2'
 		>
 			<div className='mx-auto flex h-full max-w-[1240px] flex-col justify-center'>
 				<h1 className='pb-4 text-2xl uppercase tracking-widest text-accent'>
