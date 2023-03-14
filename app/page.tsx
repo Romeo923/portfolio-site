@@ -6,7 +6,7 @@ import Contact from "@/components/Contact"
 
 export default function Home() {
 	return (
-		<main className='mx:auto h-screen w-screen snap-y snap-mandatory overflow-scroll'>
+		<main className='h-screen w-screen  md:snap-y md:snap-mandatory md:overflow-scroll'>
 			<Main />
 			<About />
 			<Skills />

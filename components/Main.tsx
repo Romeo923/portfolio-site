@@ -6,16 +6,27 @@ import { motion } from "framer-motion"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { Cursor, useTypewriter } from "react-simple-typewriter"
+import BGCircle from "@/components/BGCircle"
 
 export default function Main() {
+	const [job, jobTW] = useTypewriter({
+		words: ["<Software Engineer />", "<Front-End Dev />"],
+		loop: 0,
+		delaySpeed: 2500,
+	})
 	return (
 		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1.5 }}
 			key='home'
 			id='home'
 			className='h-screen w-full snap-center text-center'
 		>
-			<div className='mx-auto flex h-full w-full max-w-[1240px] items-center justify-center p-2'>
-				<div>
+			<div className='mx-auto flex h-full w-full max-w-[1240px] flex-col items-center justify-center p-2'>
+				<BGCircle />
+				<div className='z-50'>
 					<p className='uppercase tracking-widest text-gray-600 dark:text-primary-white-3'>
 						Let&apos;s Build Something Together
 					</p>
@@ -23,9 +34,8 @@ export default function Main() {
 						Hi, I&apos;m <span className='text-accent'>Romeo</span>
 					</h1>
 					<h1 className='py-2 text-gray-700 dark:text-primary-white-2'>
-						A
-						<span className='text-accent'> Software Engineer </span>
-						and <div className='text-accent'>Front-End Dev</div>
+						<span className='text-accent'>{job}</span>
+						<Cursor />
 					</h1>
 					<p className='m-auto max-w-[70%] py-4 text-gray-600 dark:text-primary-white-3'></p>
 					<div className='m-auto flex max-w-[330px] items-center justify-between py-4'>

@@ -7,7 +7,7 @@ export default function About() {
 	return (
 		<div
 			id='about'
-			className='flex h-screen w-full snap-start items-center p-2 py-16'
+			className='flex w-full snap-start items-center p-2 py-16 md:h-screen'
 		>
 			<div className='m-auto max-w-[1240px] grid-cols-3 gap-8 md:grid'>
 				<div className='col-span-2'>

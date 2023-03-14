@@ -122,7 +122,7 @@ export default function Navbar() {
 				className={
 					nav
 						? "fixed top-0 left-0 h-screen w-full bg-black/70 text-primary-dark dark:bg-primary-black-3/70 dark:text-primary-light md:hidden"
-						: ""
+						: "invisible"
 				}
 			>
 				<div
@@ -166,7 +166,7 @@ export default function Navbar() {
 					<div className='flex flex-col py-4'>
 						<ul className='uppercase'>
 							<a
-								href='/home'
+								href='/#home'
 								onClick={handleNav}
 							>
 								<li className='py-4 text-sm'>Home</li>
