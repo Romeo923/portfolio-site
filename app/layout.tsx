@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import Navbar from "@/components/Navbar"
 import Providers from "@/components/Providers"
 import "./globals.css"
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: Props) {
 						{children}
 					</Providers>
 				</div>
+				<Analytics />
 			</body>
 		</html>
 	)
