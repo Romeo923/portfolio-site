@@ -29,10 +29,7 @@ export default function Contact() {
 		})
 	}
 	return (
-		<div
-			id='contact'
-			className='h-screen w-full snap-center p-2 py-16'
-		>
+		<div className='h-screen w-full p-2 py-16'>
 			<div className='m-auto w-full max-w-[1240px] px-2 py-16'>
 				<p className='text-xl uppercase tracking-widest text-accent'>
 					Contact
@@ -168,16 +165,6 @@ export default function Contact() {
 							</form>
 						</div>
 					</div>
-				</div>
-				<div className='flex justify-center py-12'>
-					<a href='/#home'>
-						<div className='social-icon p-4 shadow-none hover:scale-110 dark:shadow-none'>
-							<HiOutlineChevronDoubleUp
-								className='m-auto text-accent'
-								size={50}
-							/>
-						</div>
-					</a>
 				</div>
 			</div>
 		</div>

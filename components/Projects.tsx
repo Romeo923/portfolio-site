@@ -1,38 +1,48 @@
+"use client"
 import React from "react"
 import ProjectItem from "./ProjectItem"
+import { motion } from "framer-motion"
 
 export default function Projects() {
+	const projects = [
+		{
+			name: "Facial Recognition",
+			description: "FC Description",
+			projUrl: "facialrecogniton",
+		},
+		{
+			name: "Canvas CLI",
+			description: "Canvas Description",
+			projUrl: "canvascli",
+		},
+		{
+			name: "Portfolio Website",
+			description: "Site Description",
+			projUrl: "portfolio",
+		},
+	]
+
 	return (
-		<div
-			id='projects'
-			className='h-screen w-full snap-center p-16'
+		<motion.div
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			transition={{ duration: 1.5 }}
+			className='relative mx-auto flex h-screen max-w-full flex-col items-center justify-evenly overflow-hidden px-10 pt-24 md:flex-row'
 		>
-			<div className='mx-auto h-full max-w-[1240px] px-2 py-16'>
+			<div className='mx-auto h-full max-w-[1240px] px-2 '>
 				<p className='text-xl uppercase tracking-widest text-accent'>
 					Projects
 				</p>
-				<h2 className='pb-3'>What I&apos;ve Built</h2>
-				<div className='grid gap-8 md:grid-cols-2'>
-					<ProjectItem
-						name='Facial Recognition'
-						description='Used PCA to classify face images from the AT&T Face Dataset'
-						imgPath='/programming.jpg'
-						projUrl='facialrecognition'
-					/>
-					<ProjectItem
-						name='Portfolio Website'
-						description='Used Next.js and Tailwind CSS to build a portfolio website'
-						imgPath='/programming.jpg'
-						projUrl='portfolio'
-					/>
-					<ProjectItem
-						name='Canvas CLI'
-						description='Used Python and the Canvas API to make a command line interface for Canvas'
-						imgPath='/programming.jpg'
-						projUrl='canvascli'
-					/>
-				</div>
 			</div>
-		</div>
+
+			<div className='flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll'>
+				{projects.map(project => (
+					<ProjectItem
+						{...project}
+						key={project.projUrl}
+					/>
+				))}
+			</div>
+		</motion.div>
 	)
 }

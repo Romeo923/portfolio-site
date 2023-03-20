@@ -2,12 +2,13 @@
 
 import Link from "next/link"
 import React from "react"
-import { motion } from "framer-motion"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import BGCircle from "@/components/BGCircle"
+import { motion } from "framer-motion"
+import { fadeIn } from "@/utils/variants"
 
 export default function Main() {
 	const [job, jobTW] = useTypewriter({
@@ -16,34 +17,39 @@ export default function Main() {
 		delaySpeed: 2500,
 	})
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			transition={{ duration: 1.5 }}
-			key='home'
-			id='home'
-			className='h-screen w-full snap-center text-center'
-		>
+		<div className='h-screen w-full text-center'>
 			<div className='mx-auto flex h-full w-full max-w-[1240px] flex-col items-center justify-center p-2'>
 				<BGCircle />
 				<div className='z-50'>
 					<p className='uppercase tracking-widest text-gray-600 dark:text-primary-white-3'>
 						Let&apos;s Build Something Together
 					</p>
-					<h1 className='py-4 text-gray-700 dark:text-primary-white-2'>
+					<motion.h1
+						initial='hidden'
+						variants={fadeIn({ direction: "left", delay: 0.3 })}
+						whileInView={"show"}
+						viewport={{ once: false, amount: 0.7 }}
+						className='py-4 text-gray-700 dark:text-primary-white-2'
+					>
 						Hi, I&apos;m <span className='text-accent'>Romeo</span>
-					</h1>
-					<h1 className='py-2 text-gray-700 dark:text-primary-white-2'>
+					</motion.h1>
+					<motion.h1
+						initial='hidden'
+						variants={fadeIn({ direction: "right", delay: 0.3 })}
+						whileInView={"show"}
+						viewport={{ once: false, amount: 0.7 }}
+						className='bold py-2 text-gray-700 dark:text-primary-white-2'
+					>
 						<span className='text-accent'>{job}</span>
 						<Cursor />
-					</h1>
+					</motion.h1>
 					<p className='m-auto max-w-[70%] py-4 text-gray-600 dark:text-primary-white-3'></p>
 					<div className='m-auto flex max-w-[330px] items-center justify-between py-4'>
 						<Link
 							target='_blank'
 							rel='noopener noreferrer'
 							href='https://linkedin.com/in/romeo923/'
-							className='social-icon p-6 hover:scale-110'
+							className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
 						>
 							<FaLinkedinIn />
 						</Link>
@@ -51,7 +57,7 @@ export default function Main() {
 							target='_blank'
 							rel='noopener noreferrer'
 							href='https://github.com/Romeo923'
-							className='social-icon p-6 hover:scale-110'
+							className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
 						>
 							<FaGithub />
 						</Link>
@@ -59,7 +65,7 @@ export default function Main() {
 							target='_blank'
 							rel='noopener noreferrer'
 							href='mailto:romeo.capozziello@gmail.com'
-							className='social-icon p-6 hover:scale-110'
+							className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
 						>
 							<AiOutlineMail />
 						</Link>
@@ -67,13 +73,13 @@ export default function Main() {
 							target='_blank'
 							rel='noopener noreferrer'
 							href='/resume.pdf'
-							className='social-icon p-6 hover:scale-110'
+							className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
 						>
 							<BsFillPersonLinesFill />
 						</Link>
 					</div>
 				</div>
 			</div>
-		</motion.div>
+		</div>
 	)
 }

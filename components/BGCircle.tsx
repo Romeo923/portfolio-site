@@ -1,8 +1,6 @@
 import React from "react"
 
-type Props = {}
-
-export default function BoarderCircle({}: Props) {
+export default function BoarderCircle() {
 	return (
 		<div className='relative z-0 flex items-center justify-center overflow-auto sm:overflow-visible'>
 			<div className='absolute mt-72 h-[1000px] w-[1000px] animate-pulse rounded-full border border-accent opacity-20' />

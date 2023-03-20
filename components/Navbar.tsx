@@ -32,11 +32,11 @@ export default function Navbar() {
 	}
 
 	return (
-		<div
+		<nav
 			className={
 				shadow
-					? "fixed z-[100] h-20 w-full bg-primary-light shadow-xl duration-300 ease-in dark:bg-primary-black-1 dark:shadow-sm dark:shadow-primary-white-3"
-					: "fixed z-[100] h-20 w-full bg-primary-light duration-300 ease-in dark:bg-primary-black-1"
+					? "fixed top-0 z-[100] h-20 w-full bg-primary-light shadow-xl duration-300 ease-in dark:bg-primary-black-1 dark:shadow-sm dark:shadow-primary-white-3"
+					: "fixed top-0 z-[100] h-20 w-full bg-primary-light duration-300 ease-in dark:bg-primary-black-1"
 			}
 		>
 			<div className='flex h-full w-full items-center justify-between px-2 2xl:px-16'>
@@ -55,44 +55,19 @@ export default function Navbar() {
 				<div>
 					<ul className='hidden md:flex'>
 						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
-							<Link
-								href='/'
-								scroll={false}
-							>
-								Home
-							</Link>
+							<a href='/#home'>Home</a>
 						</li>
 						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
-							<Link
-								href='/#about'
-								scroll={false}
-							>
-								About
-							</Link>
+							<a href='/#about'>About</a>
 						</li>
 						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
-							<Link
-								href='/#skills'
-								scroll={false}
-							>
-								Skills
-							</Link>
+							<a href='/#skills'>Skills</a>
 						</li>
 						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
-							<Link
-								href='/#projects'
-								scroll={false}
-							>
-								Projects
-							</Link>
+							<a href='/#projects'>Projects</a>
 						</li>
 						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
-							<Link
-								href='/#contact'
-								scroll={false}
-							>
-								Contact
-							</Link>
+							<a href='/#contact'>Contact</a>
 						</li>
 						<div className='ml-10 mr-5 text-sm uppercase'>
 							<li>
@@ -257,6 +232,6 @@ export default function Navbar() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</nav>
 	)
 }

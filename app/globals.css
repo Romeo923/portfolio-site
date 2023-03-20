@@ -8,16 +8,7 @@ html {
 
 @layer base {
 	body {
-		@apply bg-[#ecf0f3] tracking-wide text-[#1f2937];
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply font-bold;
+		@apply bg-[#ecf0f3] tracking-wide text-[#1f2937] dark:bg-primary-black-1;
 	}
 
 	h1 {
