@@ -66,9 +66,9 @@ export default function Navbar() {
 						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
 							<a href='/#projects'>Projects</a>
 						</li>
-						<li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
+						{/* <li className='ml-10 text-sm uppercase hover:border-b hover:border-b-black dark:hover:border-b-white'>
 							<a href='/#contact'>Contact</a>
-						</li>
+						</li> */}
 						<div className='ml-10 mr-5 text-sm uppercase'>
 							<li>
 								{currTheme === "light" ? (
@@ -164,12 +164,12 @@ export default function Navbar() {
 							>
 								<li className='py-4 text-sm'>Projects</li>
 							</a>
-							<a
+							{/* <a
 								href='/#contact'
 								onClick={handleNav}
 							>
 								<li className='py-4 text-sm'>Contacts</li>
-							</a>
+							</a> */}
 						</ul>
 						<div className='pt-40'>
 							<p className='uppercase tracking-widest text-accent'>

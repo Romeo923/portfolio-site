@@ -5,8 +5,9 @@ import Skills from "@/components/Skills"
 import Contact from "@/components/Contact"
 
 export default function Home() {
+	const snapping = "md:snap-y md:snap-mandatory md:overflow-scroll"
 	return (
-		<main className='h-screen w-screen md:snap-y md:snap-mandatory md:overflow-scroll'>
+		<main className='h-screen w-screen '>
 			<section
 				id='home'
 				className='snap-start'

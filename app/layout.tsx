@@ -5,7 +5,13 @@ import "./globals.css"
 
 export const metadata = {
 	title: "Romeo Capozziello",
-	description: "Nextjs 13 Portfolio Website",
+	description: "Romeo Capozziello: Software Developer",
+	icons: { icon: "/logoDark.svg" },
+	viewport: {
+		width: "device-width",
+		initialScale: 1,
+		maximumScale: 1,
+	},
 }
 
 type Props = {

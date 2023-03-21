@@ -6,8 +6,8 @@ import { fadeIn } from "@/utils/variants"
 
 export default function About() {
 	return (
-		<div className='m-auto w-full max-w-[1240px] grid-cols-3 items-center gap-8 p-2 py-16 md:grid md:h-screen'>
-			<div className='col-span-2'>
+		<div className='h-full grid-cols-3 items-center gap-8 overflow-hidden py-16 md:grid md:h-screen'>
+			<div className='col-span-2 pt-6'>
 				<motion.h1
 					initial='hidden'
 					variants={fadeIn({ direction: "down", delay: 0 })}

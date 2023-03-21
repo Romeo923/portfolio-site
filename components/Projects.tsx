@@ -7,18 +7,41 @@ export default function Projects() {
 	const projects = [
 		{
 			name: "Facial Recognition",
-			description: "FC Description",
+			points: ["FC Description", "FC Description", "FC Description"],
 			projUrl: "facialrecogniton",
+			tools: [
+				"/skills/Typescript.png",
+				"/skills/Typescript.png",
+				"/skills/Typescript.png",
+			],
 		},
 		{
 			name: "Canvas CLI",
-			description: "Canvas Description",
+			points: [
+				"Canvas Description",
+				"Canvas Description",
+				"Canvas Description",
+			],
 			projUrl: "canvascli",
+			tools: [
+				"/skills/Typescript.png",
+				"/skills/Typescript.png",
+				"/skills/Typescript.png",
+			],
 		},
 		{
 			name: "Portfolio Website",
-			description: "Site Description",
+			points: [
+				"Site Description",
+				"Site Description",
+				"Site Description",
+			],
 			projUrl: "portfolio",
+			tools: [
+				"/skills/Typescript.png",
+				"/skills/Typescript.png",
+				"/skills/Typescript.png",
+			],
 		},
 	]
 

@@ -27,6 +27,7 @@ export default function Skills() {
 			name: "GitHub",
 		},
 	]
+
 	return (
 		<motion.div
 			key='skills'
@@ -47,8 +48,11 @@ export default function Skills() {
 						<motion.div
 							initial='hidden'
 							variants={fadeIn({
-								direction: "down",
-								delay: 1 + idx * 0.15,
+								direction:
+									Math.floor(Math.random() * 10) % 2 === 0
+										? "down"
+										: "up",
+								delay: 1 + Math.floor(Math.random() * 10) / 10,
 							})}
 							whileInView={"show"}
 							viewport={{ once: false, amount: 0.7 }}

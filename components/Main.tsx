@@ -17,67 +17,67 @@ export default function Main() {
 		delaySpeed: 2500,
 	})
 	return (
-		<div className='h-screen w-full text-center'>
-			<div className='mx-auto flex h-full w-full max-w-[1240px] flex-col items-center justify-center p-2'>
-				<BGCircle />
-				<div className='z-50'>
-					<p className='uppercase tracking-widest text-gray-600 dark:text-primary-white-3'>
-						Let&apos;s Build Something Together
-					</p>
-					<motion.h1
-						initial='hidden'
-						variants={fadeIn({ direction: "left", delay: 0.3 })}
-						whileInView={"show"}
-						viewport={{ once: false, amount: 0.7 }}
-						className='py-4 text-gray-700 dark:text-primary-white-2'
+		<div className='flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center'>
+			<BGCircle />
+			<div className='z-50'>
+				<p className='uppercase tracking-widest text-gray-600 dark:text-primary-white-3'>
+					Let&apos;s Build Something Together
+				</p>
+				<motion.h1
+					initial='hidden'
+					variants={fadeIn({ direction: "left", delay: 0.3 })}
+					whileInView={"show"}
+					viewport={{ once: false, amount: 0.7 }}
+					className='text5xl scroll-px-10 py-4 text-gray-700 dark:text-primary-white-2 lg:text-6xl'
+				>
+					Hi, I&apos;m <span className='text-accent'>Romeo</span>
+				</motion.h1>
+				<motion.h1
+					initial='hidden'
+					variants={fadeIn({ direction: "right", delay: 0.3 })}
+					whileInView={"show"}
+					viewport={{ once: false, amount: 0.7 }}
+					className='bold py-2 text-gray-700 dark:text-primary-white-2'
+				>
+					<span className='text5xl scroll-px-10 text-accent lg:text-6xl'>
+						{job}
+					</span>
+					<Cursor />
+				</motion.h1>
+				<p className='m-auto max-w-[70%] py-4 text-gray-600 dark:text-primary-white-3'></p>
+				<div className='m-auto flex max-w-[330px] items-center justify-between py-4'>
+					<Link
+						target='_blank'
+						rel='noopener noreferrer'
+						href='https://linkedin.com/in/romeo923/'
+						className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
 					>
-						Hi, I&apos;m <span className='text-accent'>Romeo</span>
-					</motion.h1>
-					<motion.h1
-						initial='hidden'
-						variants={fadeIn({ direction: "right", delay: 0.3 })}
-						whileInView={"show"}
-						viewport={{ once: false, amount: 0.7 }}
-						className='bold py-2 text-gray-700 dark:text-primary-white-2'
+						<FaLinkedinIn />
+					</Link>
+					<Link
+						target='_blank'
+						rel='noopener noreferrer'
+						href='https://github.com/Romeo923'
+						className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
 					>
-						<span className='text-accent'>{job}</span>
-						<Cursor />
-					</motion.h1>
-					<p className='m-auto max-w-[70%] py-4 text-gray-600 dark:text-primary-white-3'></p>
-					<div className='m-auto flex max-w-[330px] items-center justify-between py-4'>
-						<Link
-							target='_blank'
-							rel='noopener noreferrer'
-							href='https://linkedin.com/in/romeo923/'
-							className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
-						>
-							<FaLinkedinIn />
-						</Link>
-						<Link
-							target='_blank'
-							rel='noopener noreferrer'
-							href='https://github.com/Romeo923'
-							className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
-						>
-							<FaGithub />
-						</Link>
-						<Link
-							target='_blank'
-							rel='noopener noreferrer'
-							href='mailto:romeo.capozziello@gmail.com'
-							className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
-						>
-							<AiOutlineMail />
-						</Link>
-						<Link
-							target='_blank'
-							rel='noopener noreferrer'
-							href='/resume.pdf'
-							className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
-						>
-							<BsFillPersonLinesFill />
-						</Link>
-					</div>
+						<FaGithub />
+					</Link>
+					<Link
+						target='_blank'
+						rel='noopener noreferrer'
+						href='mailto:romeo.capozziello@gmail.com'
+						className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
+					>
+						<AiOutlineMail />
+					</Link>
+					<Link
+						target='_blank'
+						rel='noopener noreferrer'
+						href='/resume.pdf'
+						className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
+					>
+						<BsFillPersonLinesFill />
+					</Link>
 				</div>
 			</div>
 		</div>

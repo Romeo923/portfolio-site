@@ -7,7 +7,6 @@ import React, { useRef } from "react"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
-import { HiOutlineChevronDoubleUp } from "react-icons/hi"
 
 export default function Contact() {
 	const { systemTheme, theme } = useTheme()
