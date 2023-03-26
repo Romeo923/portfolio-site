@@ -12,7 +12,7 @@ import { fadeIn } from "@/utils/variants"
 
 export default function Main() {
 	const [job, jobTW] = useTypewriter({
-		words: ["<Software Engineer />", "<Front-End Dev />"],
+		words: ["<SoftwareEngineer />", "<FrontEndDev />"],
 		loop: 0,
 		delaySpeed: 2500,
 	})
@@ -21,7 +21,7 @@ export default function Main() {
 			<BGCircle />
 			<div className='z-50'>
 				<p className='uppercase tracking-widest text-gray-600 dark:text-primary-white-3'>
-					Let&apos;s Build Something Together
+					Let&apos;s Build Something Great Together
 				</p>
 				<motion.h1
 					initial='hidden'

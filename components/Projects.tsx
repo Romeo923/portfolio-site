@@ -2,70 +2,83 @@
 import React from "react"
 import ProjectItem from "./ProjectItem"
 import { motion } from "framer-motion"
+import { fadeIn } from "@/utils/variants"
 
 export default function Projects() {
 	const projects = [
 		{
 			name: "Facial Recognition",
-			points: ["FC Description", "FC Description", "FC Description"],
-			projUrl: "facialrecogniton",
-			tools: [
-				"/skills/Typescript.png",
-				"/skills/Typescript.png",
-				"/skills/Typescript.png",
+			points: [
+				"Uses Principal Component Analysis to classifies face images",
+				"Trained using the AT&T Face Dataset",
+				"Learned how use opencv, analyze and compare data, as well as use PCA to reduce dimentionality of data",
 			],
+			projUrl: "facialrecogniton",
+			tools: ["/skills/c.svg"],
 		},
 		{
 			name: "Canvas CLI",
 			points: [
-				"Canvas Description",
-				"Canvas Description",
-				"Canvas Description",
+				"Utilizes the Canvas LMS API to implement a command line interface to interact with Canvas",
+				"Allows users to upload, edit, and remove assignments and files to/from Canvas",
+				"Learned how to use the requests library to use APIs and fetch/send data",
 			],
 			projUrl: "canvascli",
-			tools: [
-				"/skills/Typescript.png",
-				"/skills/Typescript.png",
-				"/skills/Typescript.png",
+			tools: ["/skills/python.png"],
+		},
+		{
+			name: "Minesweeper",
+			points: [
+				"Implemented Minesweeper",
+				"Capable of running multiple games concurrently",
+				"Uses Inheritance and Polymorphism to construct different game variations",
+				"Users can select various difficulty options and board types",
 			],
+			projUrl: "minesweeper",
+			tools: ["/skills/cpp.png"],
 		},
 		{
 			name: "Portfolio Website",
 			points: [
-				"Site Description",
-				"Site Description",
-				"Site Description",
+				"First attempt at building a website",
+				"Learned how to build and deploy websites",
+				"Learned various concepts such as server-side rendering and client-side rendering",
 			],
 			projUrl: "portfolio",
 			tools: [
+				"/skills/nextjs.png",
 				"/skills/Typescript.png",
-				"/skills/Typescript.png",
-				"/skills/Typescript.png",
+				"/skills/tailwind.png",
 			],
 		},
 	]
 
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
-			transition={{ duration: 1.5 }}
-			className='relative mx-auto flex h-screen max-w-full flex-col items-center justify-evenly overflow-hidden px-10 pt-24 md:flex-row'
-		>
-			<div className='mx-auto h-full max-w-[1240px] px-2 '>
-				<p className='text-xl uppercase tracking-widest text-accent'>
-					Projects
-				</p>
-			</div>
+		<div className='mx-auto flex h-screen max-w-full flex-col items-center justify-evenly overflow-hidden px-10 py-10 pt-24'>
+			<motion.h1
+				initial='hidden'
+				variants={fadeIn({ direction: "down", delay: 0 })}
+				whileInView={"show"}
+				viewport={{ once: false, amount: 0.7 }}
+				className='top-28 uppercase tracking-widest text-accent'
+			>
+				Projects
+			</motion.h1>
 
-			<div className='flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll'>
+			<motion.div
+				initial='hidden'
+				variants={fadeIn({ direction: "up", delay: 0 })}
+				whileInView={"show"}
+				viewport={{ once: false, amount: 0.7 }}
+				className='grid w-full grid-cols-1 gap-8 overflow-scroll md:grid-cols-2'
+			>
 				{projects.map(project => (
 					<ProjectItem
 						{...project}
 						key={project.projUrl}
 					/>
 				))}
-			</div>
-		</motion.div>
+			</motion.div>
+		</div>
 	)
 }

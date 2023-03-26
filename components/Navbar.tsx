@@ -134,7 +134,7 @@ export default function Navbar() {
 						</div>
 						<div className='my-4 border-b border-gray-300'>
 							<p className='w-[85%] py-4 md:w-[90%]'>
-								Lets Build Something Legendary Together
+								Lets Build Something Great Together
 							</p>
 						</div>
 					</div>
@@ -171,7 +171,7 @@ export default function Navbar() {
 								<li className='py-4 text-sm'>Contacts</li>
 							</a> */}
 						</ul>
-						<div className='pt-40'>
+						<div className='pt-28'>
 							<p className='uppercase tracking-widest text-accent'>
 								Let&apos;s Connect
 							</p>

@@ -6,7 +6,7 @@ import { fadeIn } from "@/utils/variants"
 
 export default function About() {
 	return (
-		<div className='h-full grid-cols-3 items-center gap-8 overflow-hidden py-16 md:grid md:h-screen'>
+		<div className='w-full grid-cols-3 items-center gap-8 overflow-hidden py-16 md:grid md:h-screen'>
 			<div className='col-span-2 pt-6'>
 				<motion.h1
 					initial='hidden'
@@ -22,29 +22,25 @@ export default function About() {
 					variants={fadeIn({ direction: "right", delay: 0 })}
 					whileInView={"show"}
 					viewport={{ once: false, amount: 0.7 }}
-					className='my-4 px-4 py-4 shadow-gray-400 ease-in hover:scale-105 '
+					className='my-4 px-4 py-2 ease-in '
 				>
-					<h2 className='pb-5'>Bio</h2>
+					<h2 className='pb-5'>Who Am I?</h2>
 					<p className='text-gray-600 dark:text-primary-white-3'>
-						I&apos;m a driven and motivated grad student pursuing my
-						Masters in C.S.
+						Hi, my name is Romeo Capozziello. I&apos;m a driven and
+						motivated grad student pursuing my Masters in C.S.
 					</p>
 					<p className='py-2 text-gray-600 dark:text-primary-white-3'>
-						Throughout my journey, I have honed my skills in various
-						programming languages, including JavaScript, Python, and
-						Java, and I have used this knowledge to build web and
-						mobile applications. I am excited to apply my skills and
-						knowledge to new projects and challenges in the software
-						engineering field. Please take a look at my portfolio,
-						and feel free to contact me if you have any questions or
-						if you would like to discuss a project.
+						I enjoy coding and problem solving and am proficient in
+						languages like C++ and Python. I work on campus as a
+						Math and Compuer Science Tutor as well as a Teaching
+						Assistant for a few CS classes. I&apos;m a self-taught
+						web developer with this website being my first real
+						front-end project.
 					</p>
 					<p className='text-gray-600 dark:text-primary-white-3'>
-						As a self-taught front-end developer, I specialize in
-						creating visually appealing and engaging user interfaces
-						using HTML, CSS, and JavaScript. I am passionate about
-						leveraging technology to create impactful solutions that
-						can make a positive difference in people&apos;s lives.
+						I build PCs in my free time. I&apos;ve helped build
+						several systems for my friends and am currently working
+						on a custom watercooled system for myself.
 					</p>
 				</motion.div>
 				<motion.div
@@ -52,7 +48,24 @@ export default function About() {
 					variants={fadeIn({ direction: "right", delay: 0 })}
 					whileInView={"show"}
 					viewport={{ once: false, amount: 0.7 }}
-					className='mx-auto px-4 py-4 shadow-gray-400 ease-in dark:rounded-md'
+					className='m-auto px-4 py-2 ease-in '
+				>
+					<h2 className='pb-2 text-2xl'>
+						Upsilon Pi Epsilon Honors Society - Vice President
+					</h2>
+					<p className='text-gray-600 dark:text-primary-white-3'>
+						I&apos;ve been vice president for the University of
+						Bridgeport Delta Chapter of UPE for 2 semesters. UPE is
+						an international honors society for the computing and
+						information disciplines.
+					</p>
+				</motion.div>
+				<motion.div
+					initial='hidden'
+					variants={fadeIn({ direction: "right", delay: 0 })}
+					whileInView={"show"}
+					viewport={{ once: false, amount: 0.7 }}
+					className='mx-auto px-4 py-2 ease-in'
 				>
 					<div className='grid grid-cols-2'>
 						<h2 className='col-span-2'>Education</h2>
@@ -62,10 +75,12 @@ export default function About() {
 						<p className='text-gray-600 dark:text-primary-white-3'>
 							University of Bridgeport
 						</p>
-						<p className='col-start-2 text-gray-600 dark:text-primary-white-3'>
+						<p className='col-span-2 py-2 text-gray-600 dark:text-primary-white-3 md:col-span-1 md:col-start-2'>
 							Expected Dec. 2023
 						</p>
-						<h3 className='col-span-2'>Relavent Courses</h3>
+						<h3 className='col-span-2 text-2xl'>
+							Relavent Courses
+						</h3>
 						<p className='text-gray-600 dark:text-primary-white-3'>
 							Algorithms
 						</p>

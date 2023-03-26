@@ -7,7 +7,7 @@ import Contact from "@/components/Contact"
 export default function Home() {
 	const snapping = "md:snap-y md:snap-mandatory md:overflow-scroll"
 	return (
-		<main className='h-screen w-screen '>
+		<main className='h-screen w-screen md:snap-y md:snap-mandatory md:overflow-scroll'>
 			<section
 				id='home'
 				className='snap-start'
@@ -16,19 +16,19 @@ export default function Home() {
 			</section>
 			<section
 				id='about'
-				className='snap-start'
+				className='mx-10 snap-start'
 			>
 				<About />
 			</section>
 			<section
 				id='skills'
-				className='snap-start'
+				className='mx-10 snap-start'
 			>
 				<Skills />
 			</section>
 			<section
 				id='projects'
-				className='snap-start'
+				className='mx-3 snap-start md:mx-10'
 			>
 				<Projects />
 			</section>

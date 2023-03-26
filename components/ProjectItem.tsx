@@ -16,7 +16,7 @@ export default function ProjectItem({
 	tools,
 }: ProjectItemProps) {
 	return (
-		<article className='flex w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 rounded-lg bg-primary-white-3 opacity-40 transition-opacity duration-200 hover:opacity-100'>
+		<article className='mx-2 my-6 flex h-full flex-col items-center rounded-lg p-10 shadow-lg shadow-gray-400 duration-300 ease-in dark:shadow-none dark:ring-1 dark:ring-white md:mx-4'>
 			<div className='px-0 md:px-10'>
 				<h4 className='text-4xl font-light'>{name}</h4>
 				<div className='my-2 flex space-x-2'>

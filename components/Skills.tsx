@@ -43,7 +43,7 @@ export default function Skills() {
 				>
 					Skills
 				</motion.h1>
-				<div className='grid grid-cols-4 gap-8 md:grid-cols-2 lg:grid-cols-4 '>
+				<div className='grid grid-cols-3 gap-8 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 '>
 					{mySkills.map((skill, idx) => (
 						<motion.div
 							initial='hidden'
@@ -52,7 +52,9 @@ export default function Skills() {
 									Math.floor(Math.random() * 10) % 2 === 0
 										? "down"
 										: "up",
-								delay: 1 + Math.floor(Math.random() * 10) / 10,
+								delay:
+									0.5 +
+									(0.7 * Math.floor(Math.random() * 10)) / 10,
 							})}
 							whileInView={"show"}
 							viewport={{ once: false, amount: 0.7 }}
