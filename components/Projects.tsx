@@ -70,7 +70,7 @@ export default function Projects() {
 				variants={fadeIn({ direction: "up", delay: 0 })}
 				whileInView={"show"}
 				viewport={{ once: false, amount: 0.7 }}
-				className='grid w-full grid-cols-1 gap-8 overflow-scroll md:grid-cols-2'
+				className='grid w-full grid-cols-1 gap-8 overflow-hidden overflow-y-scroll md:grid-cols-2'
 			>
 				{projects.map(project => (
 					<ProjectItem

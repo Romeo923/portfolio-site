@@ -171,7 +171,7 @@ export default function Navbar() {
 								<li className='py-4 text-sm'>Contacts</li>
 							</a> */}
 						</ul>
-						<div className='pt-28'>
+						<div className='pt-20'>
 							<p className='uppercase tracking-widest text-accent'>
 								Let&apos;s Connect
 							</p>
