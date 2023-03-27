@@ -20,7 +20,7 @@ export default function Main() {
 		<div className='flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center'>
 			<BGCircle />
 			<div className='z-50'>
-				<p className='uppercase tracking-widest text-gray-600 dark:text-primary-white-3'>
+				<p className='text-sm uppercase tracking-widest text-gray-600 dark:text-primary-white-3 sm:text-lg'>
 					Let&apos;s Build Something Great Together
 				</p>
 				<motion.h1
