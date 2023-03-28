@@ -57,18 +57,18 @@ export default function Main() {
 					<Link
 						target='_blank'
 						rel='noopener noreferrer'
-						href='https://github.com/Romeo923'
-						className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
-					>
-						<FaGithub />
-					</Link>
-					<Link
-						target='_blank'
-						rel='noopener noreferrer'
 						href='mailto:romeo.capozziello@gmail.com'
 						className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
 					>
 						<AiOutlineMail />
+					</Link>
+					<Link
+						target='_blank'
+						rel='noopener noreferrer'
+						href='https://github.com/Romeo923'
+						className='social-icon p-6 hover:scale-110 dark:shadow-accent/50'
+					>
+						<FaGithub />
 					</Link>
 					<Link
 						target='_blank'

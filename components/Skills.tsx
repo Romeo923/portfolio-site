@@ -53,8 +53,7 @@ export default function Skills() {
 										? "down"
 										: "up",
 								delay:
-									0.5 +
-									(0.7 * Math.floor(Math.random() * 10)) / 10,
+									(0.2 * Math.floor(Math.random() * 10)) / 10,
 							})}
 							whileInView={"show"}
 							viewport={{ once: false, amount: 0.7 }}
