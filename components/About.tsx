@@ -26,21 +26,15 @@ export default function About() {
 				>
 					<h2 className='pb-5'>Who Am I?</h2>
 					<p className='text-gray-600 dark:text-primary-white-3'>
-						Hi, my name is Romeo Capozziello. I&apos;m a driven and
-						motivated grad student pursuing my Masters in C.S.
-					</p>
-					<p className='py-2 text-gray-600 dark:text-primary-white-3'>
-						I enjoy coding and problem solving and am proficient in
-						languages like C++ and Python. I work on campus as a
-						Math and Compuer Science Tutor as well as a Teaching
-						Assistant for a few CS classes. I&apos;m a self-taught
-						web developer with this website being my first real
-						front-end project.
+						Hi, I&apos;m Romeo Capozziello, an Embedded Software Engineer with a Master&apos;s in Computer Science.
+            I&apos;m passionate about developing innovative solutions and optimizing complex systems.
 					</p>
 					<p className='text-gray-600 dark:text-primary-white-3'>
-						I build PCs in my free time. I&apos;ve helped build
-						several systems for my friends and am currently working
-						on a custom watercooled system for myself.
+            I have experience in C++ and excel at tackling challenging problems while continuing to hone my skills.
+            At General Dynamics Electric Boat, I contribute to the development of advanced ship control systems.
+					</p>
+					<p className='text-gray-600 dark:text-primary-white-3'>
+            Outside of my professional work, I enjoy building PCs and gaming.
 					</p>
 				</motion.div>
 				<motion.div
@@ -54,10 +48,7 @@ export default function About() {
 						Upsilon Pi Epsilon Honors Society - Vice President
 					</h2>
 					<p className='text-gray-600 dark:text-primary-white-3'>
-						I&apos;ve been vice president for the University of
-						Bridgeport Delta Chapter of UPE for 2 semesters. UPE is
-						an international honors society for the computing and
-						information disciplines.
+            I served as Vice President of the University of Bridgeport Delta Chapter of Upsilon Pi Epsilon (UPE) Honors Society for 2 years. UPE is an international honors society dedicated to the computing and information disciplines, where I played a role in fostering academic excellence and community engagement.
 					</p>
 				</motion.div>
 				<motion.div
@@ -76,13 +67,16 @@ export default function About() {
 							University of Bridgeport
 						</p>
 						<p className='col-span-2 py-2 text-gray-600 dark:text-primary-white-3 md:col-span-1 md:col-start-2'>
-							Expected Dec. 2023
+							May 2024
 						</p>
 						<h3 className='col-span-2 text-2xl'>
 							Relavent Courses
 						</h3>
 						<p className='text-gray-600 dark:text-primary-white-3'>
 							Algorithms
+						</p>
+						<p className='text-gray-600 dark:text-primary-white-3'>
+							OOP W/ Design Patterns
 						</p>
 						<p className='text-gray-600 dark:text-primary-white-3'>
 							Computer Vision
@@ -95,9 +89,6 @@ export default function About() {
 						</p>
 						<p className='text-gray-600 dark:text-primary-white-3'>
 							Cloud Computing
-						</p>
-						<p className='text-gray-600 dark:text-primary-white-3'>
-							OOP W/ Design Patterns
 						</p>
 					</div>
 				</motion.div>
