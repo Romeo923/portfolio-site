@@ -7,11 +7,26 @@ import { fadeIn } from "@/utils/variants"
 export default function Projects() {
 	const projects = [
 		{
+			name: "Hackathon Project",
+			points: [
+				"A social media automation tool developed during a hackathon.",
+				"Led a team of 4 in developing the project using NextJS and TypeScript.",
+				"Utilized ChatGPT and Twitter APIs to generate and schedule social media posts for companies/businesses.",
+				"Allows users to fine tune post intent, tone, and audience.",
+			],
+			projUrl: "https://github.com/Romeo923/UB-Hackathon",
+			tools: [
+				"/skills/nextjs.png",
+				"/skills/Typescript.png",
+				"/skills/tailwind.png",
+			],
+		},
+		{
 			name: "Facial Recognition",
 			points: [
-				"Uses Principal Component Analysis to classifies face images",
+				"Utilizes Principal Component Analysis (PCA) for classifying face images.",
 				"Trained using the AT&T Face Dataset",
-				"Learned how use opencv, analyze and compare data, as well as use PCA to reduce dimentionality of data",
+				"Gained experience with OpenCV for data analysis and PCA for dimentionality rediction.",
 			],
 			projUrl:
 				"https://github.com/Romeo923/CPEG-585-Computer-Vision/tree/master/Assignment%208/Assignment%208",
@@ -20,33 +35,18 @@ export default function Projects() {
 		{
 			name: "Canvas CLI",
 			points: [
-				"Utilizes the Canvas LMS API to implement a command line interface to interact with Canvas",
+				"Created command-line interface for managing Canvas assignments in python using the Canvas API",
 				"Allows users to upload, edit, and remove assignments and files to/from Canvas",
-				"Learned how to use the requests library to use APIs and fetch/send data",
 			],
 			projUrl: "https://github.com/Romeo923/Canvas-API",
 			tools: ["/skills/python.png"],
 		},
 		{
-			name: "Portfolio Website",
-			points: [
-				"First attempt at building a website",
-				"Learned how to build and deploy websites",
-				"Learned various concepts such as server-side rendering and client-side rendering",
-			],
-			projUrl: "https://github.com/Romeo923/portfolio-site",
-			tools: [
-				"/skills/nextjs.png",
-				"/skills/Typescript.png",
-				"/skills/tailwind.png",
-			],
-		},
-		{
 			name: "Minesweeper",
 			points: [
-				"Implemented Minesweeper - Group Project",
-				"Uses Inheritance and Polymorphism to construct different game variations",
-				"Capable of running multiple games concurrently",
+				"Developed Minesweeper as a group poject.",
+				"Utilizes inheritance and polymorphism to construct different game variations",
+				"Supports running multiple concurrent instances of the game.",
 				"Users can select various difficulty options and board types",
 			],
 			// projUrl: "https://github.com/jayners17/MinesweeperProject",
