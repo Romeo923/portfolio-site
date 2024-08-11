@@ -25,7 +25,7 @@ export default function ProjectItem({
               href={projUrl}
               target='_blank'
               rel='noopener noreferrer'
-              className='rounded-lg ring pt-2 px-2 justify-end dark:ring-accent ring-accent2'
+              className='rounded-lg ring h-full py-2 px-2 justify-end dark:ring-accent ring-accent2'
             >
               GitHub
             </Link>

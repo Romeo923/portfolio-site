@@ -102,7 +102,7 @@ export default function About() {
 			>
 				<Image
 					className='rounded-md'
-					src='/programming.jpg'
+					src='/headshot.png'
 					width={1200}
 					height={1200}
 					alt='/'
