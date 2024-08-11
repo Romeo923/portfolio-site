@@ -11,7 +11,6 @@ export default function Skills() {
 
 	const mySkills = [
 		{ imgPath: "/skills/cpp.png", name: "C++" },
-		{ imgPath: "/skills/c.svg", name: "C#" },
 		{
 			imgPath:
 				currTheme === "light"
@@ -20,12 +19,6 @@ export default function Skills() {
 			name: "Rust",
 		},
 		{ imgPath: "/skills/python.png", name: "Python" },
-		{ imgPath: "/skills/java.png", name: "Java" },
-		{ imgPath: "/skills/Typescript.png", name: "Typescript" },
-		{ imgPath: "/skills/react.png", name: "React" },
-		{ imgPath: "/skills/nextjs.png", name: "Next.js" },
-		{ imgPath: "/skills/html.png", name: "HTML" },
-		{ imgPath: "/skills/tailwind.png", name: "Tailwind CSS" },
 		{ imgPath: "/skills/git.png", name: "Git" },
 		{
 			imgPath:
@@ -35,6 +28,13 @@ export default function Skills() {
 			name: "GitHub",
 		},
 		{ imgPath: "/skills/linux.png", name: "Linux" },
+		{ imgPath: "/skills/java.png", name: "Java" },
+		{ imgPath: "/skills/c.svg", name: "C#" },
+		{ imgPath: "/skills/Typescript.png", name: "Typescript" },
+		{ imgPath: "/skills/react.png", name: "React" },
+		{ imgPath: "/skills/nextjs.png", name: "Next.js" },
+		{ imgPath: "/skills/html.png", name: "HTML" },
+		{ imgPath: "/skills/tailwind.png", name: "Tailwind CSS" },
 	]
 
 	return (

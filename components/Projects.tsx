@@ -14,7 +14,7 @@ export default function Projects() {
 				"Utilized ChatGPT and Twitter APIs to generate and schedule social media posts for companies/businesses.",
 				"Allows users to fine tune post intent, tone, and audience.",
 			],
-			projUrl: "https://github.com/Romeo923/UB-Hackathon",
+			projUrl: "https://github.com/BeamBounty/UB-Hackathon",
 			tools: [
 				"/skills/nextjs.png",
 				"/skills/Typescript.png",
@@ -49,7 +49,7 @@ export default function Projects() {
 				"Supports running multiple concurrent instances of the game.",
 				"Users can select various difficulty options and board types",
 			],
-			// projUrl: "https://github.com/jayners17/MinesweeperProject",
+			// projUrl: "https://github.com/jayners17/MinesweeperProject", // repo is private
 			tools: ["/skills/cpp.png"],
 		},
 	]
