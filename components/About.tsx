@@ -87,7 +87,7 @@ export default function About() {
             This script reduced the number of people required for this task,  allowing members to dedicate more time to various other areas of the project.
           </p>
           <p className='text-gray-600 dark:text-primary-white-3'>
-            While working here, I've improved my skills in C++ and git as well as gained experience working in a professional team environment.
+            While working here, I&apos;ve improved my skills in C++ and git as well as gained experience working in a professional team environment.
           </p>
 				</motion.div>
 				<motion.div
