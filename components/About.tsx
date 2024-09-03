@@ -45,10 +45,10 @@ export default function About() {
 				>
 					<div className='grid grid-cols-2'>
             <h2 className='pb-5 col-span-2'>Experience</h2>
-						<h3 className='text-gray-900 dark:text-primary-white-1'>
+						<h3 className='text-gray-900 dark:text-primary-white-1 col-span-2 md:col-span-1'>
 							General Dynamics Electric Boat
 						</h3>
-						<p className='text-gray-600 dark:text-primary-white-3'>
+						<p className='text-gray-600 dark:text-primary-white-3 col-span-2 md:col-span-1'>
 							August 2023 - Present
 						</p>
 						<p className='col-span-2 text-gray-600 dark:text-primary-white-3 md:col-span-1'>
