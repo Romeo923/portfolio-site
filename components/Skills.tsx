@@ -28,6 +28,7 @@ export default function Skills() {
 			name: "GitHub",
 		},
 		{ imgPath: "/skills/linux.png", name: "Linux" },
+		{ imgPath: "/skills/docker.png", name: "Docker" },
 		{ imgPath: "/skills/java.png", name: "Java" },
 		{ imgPath: "/skills/c.svg", name: "C#" },
 		{ imgPath: "/skills/Typescript.png", name: "Typescript" },
