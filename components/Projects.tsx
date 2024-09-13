@@ -26,7 +26,7 @@ export default function Projects() {
 			points: [
 				"Utilizes Principal Component Analysis (PCA) for classifying face images.",
 				"Trained using the AT&T Face Dataset",
-				"Gained experience with OpenCV for data analysis and PCA for dimentionality rediction.",
+				"Gained experience with OpenCV for data analysis and PCA for dimensionality reduction.",
 			],
 			projUrl:
 				"https://github.com/Romeo923/CPEG-585-Computer-Vision/tree/master/Assignment%208/Assignment%208",
@@ -44,7 +44,7 @@ export default function Projects() {
 		{
 			name: "Minesweeper",
 			points: [
-				"Developed Minesweeper as a group poject.",
+				"Developed Minesweeper as a group project.",
 				"Utilizes inheritance and polymorphism to construct different game variations",
 				"Supports running multiple concurrent instances of the game.",
 				"Users can select various difficulty options and board types",
