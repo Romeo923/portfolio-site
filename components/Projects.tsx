@@ -3,9 +3,29 @@ import React from "react"
 import ProjectItem from "./ProjectItem"
 import { motion } from "framer-motion"
 import { fadeIn } from "@/utils/variants"
+import { useTheme } from "next-themes"
 
 export default function Projects() {
+	const { systemTheme, theme } = useTheme()
+	const currTheme = theme === "system" ? systemTheme : theme
+
 	const projects = [
+		{
+			name: "Music Library Manager CLI",
+			points: [
+				"Command line interface for listening to music",
+				"Scan directories for music files",
+				"Create and manage music playlists",
+				"Play/Queue songs and playlists",
+			],
+			projUrl:
+				"https://github.com/Romeo923/music-lib-manager",
+			tools: [
+        currTheme == 'light'
+          ? "/skills/rust.png"
+          : "/skills/rustWhite.png"
+      ],
+		},
 		{
 			name: "Hackathon Project",
 			points: [
