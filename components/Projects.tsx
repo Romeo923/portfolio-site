@@ -13,10 +13,12 @@ export default function Projects() {
 		{
 			name: "Music Library Manager CLI",
 			points: [
-				"Command line interface for listening to music",
-				"Scan directories for music files",
+				"Command line interface for managing and listening to music",
+        "Spawns a daemon for audio playback",
+				"Scans directories for music files",
 				"Create and manage music playlists",
-				"Play/Queue songs and playlists",
+				"Add/Remove songs and playlists to/form a queue",
+				"Play/Pause/Resume/Skip songs in the queue",
 			],
 			projUrl:
 				"https://github.com/Romeo923/music-lib-manager",
@@ -29,10 +31,10 @@ export default function Projects() {
 		{
 			name: "Hackathon Project",
 			points: [
-				"A social media automation tool developed during a hackathon.",
-				"Led a team of 4 in developing the project using NextJS and TypeScript.",
-				"Utilized ChatGPT and Twitter APIs to generate and schedule social media posts for companies/businesses.",
-				"Allows users to fine tune post intent, tone, and audience.",
+				"A social media automation tool developed during a hackathon",
+				"Led a team of 4 in developing the project using NextJS and TypeScript",
+				"Utilized ChatGPT and Twitter APIs to generate and schedule social media posts for companies/businesses",
+				"Allows users to fine tune post intent, tone, and audience",
 			],
 			projUrl: "https://github.com/BeamBounty/UB-Hackathon",
 			tools: [
@@ -44,9 +46,9 @@ export default function Projects() {
 		{
 			name: "Facial Recognition",
 			points: [
-				"Utilizes Principal Component Analysis (PCA) for classifying face images.",
-				"Trained using the AT&T Face Dataset",
-				"Gained experience with OpenCV for data analysis and PCA for dimensionality reduction.",
+				"Utilizes Principal Component Analysis (PCA) for classifying face images",
+				"Uses the AT&T Face Dataset for training and testing",
+				"Gained experience with OpenCV for data analysis and PCA for dimensionality reduction",
 			],
 			projUrl:
 				"https://github.com/Romeo923/CPEG-585-Computer-Vision/tree/master/Assignment%208/Assignment%208",
@@ -64,9 +66,9 @@ export default function Projects() {
 		{
 			name: "Minesweeper",
 			points: [
-				"Developed Minesweeper as a group project.",
+				"Developed Minesweeper as a group project",
 				"Utilizes inheritance and polymorphism to construct different game variations",
-				"Supports running multiple concurrent instances of the game.",
+				"Supports running multiple concurrent instances of the game",
 				"Users can select various difficulty options and board types",
 			],
 			// projUrl: "https://github.com/jayners17/MinesweeperProject", // repo is private

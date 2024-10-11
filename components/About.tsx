@@ -30,10 +30,10 @@ export default function About() {
             I&apos;m passionate about developing innovative solutions and optimizing complex systems.
 					</p>
 					<p className='text-gray-600 dark:text-primary-white-3'>
-            I have strong experience in C++ and excel at tackling challenging problems. I use every opportunity to learn and find ways to improve upon my skill set.
+            I have robust experience in C++ and excel at tackling challenging problems. I use every opportunity to learn and find ways to improve upon my skill set.
 					</p>
 					<p className='text-gray-600 dark:text-primary-white-3'>
-            Outside of my professional work, I enjoy learning about new tech, building PCs, and gaming.
+            Outside of my professional work, I enjoy pursuing about new technology, building PCs, and gaming.
 					</p>
 				</motion.div>
 				<motion.div
@@ -67,7 +67,7 @@ export default function About() {
             At GDEB, my role is to support efforts in designing, developing, and testing software for ship control systems.
           </p>
           <p className='text-gray-600 dark:text-primary-white-3'>
-            Within my first year, I was able to quickly integrate myself with the team, become acquainted with systems and procedures, and identify several areas of improvement and opportunities for automation.
+            Within my first year, I was able to quickly integrate myself amidst the team, become acquainted with systems and procedures, and identify several areas of improvement and opportunities for automation.
           </p>
           <p className='text-gray-600 dark:text-primary-white-3'>
             I received an Operational Excellence Award for completely overhauling the test team workflow by automating redundant tasks and drastically improving tools utilized by the test team.
@@ -81,13 +81,13 @@ export default function About() {
 					className='my-4 px-4 ease-in '
 				>
           <p className='text-gray-600 dark:text-primary-white-3'>
-            In addition, I was tasked with assisting a project that was falling behind to get it back on schedule. I wrote a script to read our local database files and generate code for each subsystem based on that data.
+            In addition, I was delegated to assisting a project maintain schedule by diminishing a growing list of backlogged tasks. I wrote a script to read our local database files and generate code for each subsystem based on that data.
           </p>
           <p className='text-gray-600 dark:text-primary-white-3'>
-            This script reduced the number of people required for this task,  allowing members to dedicate more time to various other areas of the project.
+            This script reduced the number of people required for this task, allowing members to dedicate more time to various other areas of the project.
           </p>
           <p className='text-gray-600 dark:text-primary-white-3'>
-            While working here, I&apos;ve improved my skills in C++ and git as well as gained experience working in a professional team environment.
+            While working at GDEB, I&apos;ve improved my skills in C++ and Git as well as gained experience working in a professional team environment.
           </p>
 				</motion.div>
 				<motion.div
